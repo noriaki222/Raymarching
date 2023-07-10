@@ -7,8 +7,8 @@ Shader "Custom/Ray"
 	{
 		Tags
 		{
-			"Queue" = "Geometry"
-			"RenderType" = "Opaque"
+			"Queue" = "Transparent"
+			"RenderType" = "Transparent"
 			"RenderPipeline" = "UniversalPipeline"
 			"IgnoreProjector" = "True"
 			"ShaderModel" = "4.5"
@@ -118,7 +118,7 @@ Shader "Custom/Ray"
 					ray.origin += ray.direction * dist;
 				}
 
-				return float4(color, 1.0);
+				return float4(color, 0.0);
 			}
 			ENDHLSL
 		}

@@ -139,8 +139,8 @@ FragmentOutput frag(Varyings input)
 		{
 			// 距離が十分に短かったら衝突したと判定して色を計算する
 			normal = getNormal(ray.origin);
-			float diff = dot(normal, lightDir);
-			color.rgb = diff;
+			color.rgb = 1.0;
+			color.a = 1.0;
 			break;
 		}
 		// レイを進める
